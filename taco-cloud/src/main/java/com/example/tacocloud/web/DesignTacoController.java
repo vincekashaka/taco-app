@@ -6,6 +6,7 @@ import com.example.tacocloud.Ingredient.Type;
 import com.example.tacocloud.Taco;
 import com.example.tacocloud.TacoOrder;
 import lombok.extern.slf4j.Slf4j;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +21,7 @@ import java.util.stream.Collectors;
 
 @Slf4j
 @Controller
-@RequestMapping("/design")
+@RequestMapping("/")
 @SessionAttributes("tacoOrder")
 public class DesignTacoController {
 
