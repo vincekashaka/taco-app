@@ -1,10 +1,10 @@
-package com.example.tacocloud.web;
+package com.example.tacocloud.controller;
 
 
-import com.example.tacocloud.Ingredient;
-import com.example.tacocloud.Ingredient.Type;
-import com.example.tacocloud.Taco;
-import com.example.tacocloud.TacoOrder;
+import com.example.tacocloud.model.Ingredient;
+import com.example.tacocloud.model.Ingredient.Type;
+import com.example.tacocloud.model.Taco;
+import com.example.tacocloud.model.TacoOrder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
