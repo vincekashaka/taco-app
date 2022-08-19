@@ -29,7 +29,7 @@ public class IngredientService {
         return ingredientRepository.findAll();
     }
 
-    public Optional<Ingredient> getIngredientById(String id){
+    public Optional<Ingredient> getIngredientById(Long id){
         return ingredientRepository.findById(id);
     }
 
@@ -39,8 +39,17 @@ public class IngredientService {
     }
 
     //delete
-    public String deleteProduct(String id){
+    public String deleteProduct(Long id){
         ingredientRepository.deleteById(id);
         return "Ingredient removed" + id;
     }
+
+//    //update ingredients
+    public Ingredient updateIngredient(Ingredient ingredient){
+        Ingredient existingIngredient = ingredientRepository.findById(ingredient.getId()).orElse(null);
+        existingIngredient.setName(ingredient.getName());
+        existingIngredient.setType(ingredient.getType());
+        return ingredientRepository.save(existingIngredient);
+    }
+
 }
