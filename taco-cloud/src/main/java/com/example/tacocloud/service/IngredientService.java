@@ -34,7 +34,7 @@ public class IngredientService {
     }
 
     // customized
-    public Optional<Ingredient> getIngredeintByNane(String name){
+    public Optional<Ingredient> getIngredeintByName(String name){
         return ingredientRepository.findByName(name);
     }
 

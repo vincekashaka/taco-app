@@ -2,6 +2,7 @@ package com.example.tacocloud.controller;
 
 import com.example.tacocloud.model.Taco;
 import com.example.tacocloud.model.TacoOrder;
+import com.example.tacocloud.repository.IngredientRepository;
 import com.example.tacocloud.repository.TacoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -21,6 +22,9 @@ public class TacoController {
 
     @Autowired
     private TacoRepository tacoRepository;
+
+    @Autowired
+    private IngredientRepository ingredientRepository;
 
 
     @GetMapping(params = "recent")
@@ -81,7 +85,7 @@ public class TacoController {
         if (patch.getCcCVV() != null) {
             order.setCcCVV(patch.getCcCVV());
         }
-        return repo.save(order);
+        return ingredientRepository.save(order);
     }
 
     @DeleteMapping("/{orderId}")
