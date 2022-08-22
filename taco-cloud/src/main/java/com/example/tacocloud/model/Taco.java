@@ -12,6 +12,7 @@ import java.util.List;
 
 @Data
 @Entity
+@Table(name = "TACO_TBL")
 
 public class Taco {
 
